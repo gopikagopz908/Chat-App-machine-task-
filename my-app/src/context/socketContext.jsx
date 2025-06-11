@@ -21,13 +21,13 @@ useEffect(() => {
         if (authUser) {
            
           let  socketUrl=import.meta.env.VITE_SOCKET_URL
-          console.log(socketUrl,'urll')
+        
            const socket = io(socketUrl,{
                 query:{
                     userId:authUser?._id
                 }
 });
-   
+    
 
             socket.on('connect', () => {
                 console.log('Connected to the server, socket id:', socket.id);

@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import MessageCard from '../components/MessageCard';
 import { useGetMessages, useSendMessage } from '../Hook/MessageHook';
 import { useConversation } from '../context/ConversationContext';
+import useListenMessages from '../Hook/useListenMessages';
 
 
 const ChatPage = () => {
    const{selectedConversation}=useConversation()
    console.log(selectedConversation,"selecteddd")
-
+useListenMessages() 
   const[data,setData]=useState('')
     
     const{sendMessage}=useSendMessage()

@@ -6,11 +6,11 @@ import userRoute from './src/routes/userRoute.js'
 import messageRoute from './src/routes/messageRoute.js'
 import cookieParser from 'cookie-parser'
 import dotenv from 'dotenv'
-// import dbConnect from './src/dbConfig/dbConnect.js';
+import dbConnect from './src/dbConfig/dbConnect.js'
 
 dotenv.config();
 console.log(process.env.PORT,"jjj")
-let PORT=process.env.PORT;
+let PORT=process.env.PORT||4004;
 
 app.use(express.json()) 
 app.use(cookieParser())
