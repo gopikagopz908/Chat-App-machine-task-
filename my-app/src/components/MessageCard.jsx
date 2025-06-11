@@ -10,7 +10,7 @@ const MessageCard = ({msg}) => {
   console.log(msg,"msgggggg")
   return (
 <div className={`w-full flex flex-col ${isSelected?'items-end':'items-start'} `}>
-  <div className="bg-yellow-500 text-black px-4 py-2 rounded-lg shadow-sm max-w-xs">
+  <div className={` text-black px-4 py-2 rounded-lg shadow-sm max-w-xs  ${isSelected?'bg-primary ':'bg-[#F2F2F2]'}`}>
     <p className="text-sm font-medium">{msg?.message}</p>
   </div>
 </div>

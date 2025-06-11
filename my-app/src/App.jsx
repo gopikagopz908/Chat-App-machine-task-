@@ -10,7 +10,8 @@ import Register from './pages/Register'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import ChatPage from './pages/ChatPage'
-import SidebarLayout from '../../Backend/src/layout/SidebarLayout'
+
+import SidebarLayout from './layout/SidebarLayout'
 
 function App() {
   
@@ -23,7 +24,7 @@ function App() {
         <Route path='/' element={<Register/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/home' element={<Home/>}/>
-         <Route element={<SidebarLayout />}>
+         <Route element={<SidebarLayout/>}>
           <Route path="/chat" element={<ChatPage />} />
         </Route>
        
