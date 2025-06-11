@@ -8,7 +8,7 @@ function UserCard({ user }) {
   const{setSelectedConversation}=useConversation()
   const handleConversation=(user)=>{
     setSelectedConversation(user)
-  navigate(`/chat/${user._id}`)
+  navigate(`/chat`)
   }
   
   return (
@@ -17,7 +17,7 @@ function UserCard({ user }) {
      className="flex items-center justify-between bg-white p-4 rounded-lg shadow-md w-full ">
       <div className="flex items-center gap-4">
         <img
-          src={user.image || `https://ui-avatars.com/api/?name=${user.firstName}&background=random&color=fff`}
+          src={user.image || `https://ui-avatars.com/api/?name=${user?.firstName}&background=random&color=fff`}
           alt={user.name}
           className="w-14 h-14 rounded-full object-cover"
         />

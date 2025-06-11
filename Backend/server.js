@@ -1,11 +1,11 @@
-import app from './app.js'
-import dotenv from 'dotenv'
-import dbConnect from './src/dbConfig/dbConnect.js';
+// import app from './app.js'
+// import dotenv from 'dotenv'
+// import dbConnect from './src/dbConfig/dbConnect.js';
 
-dotenv.config();
+// dotenv.config();
 
-dbConnect()
+// dbConnect()
 
-let PORT=process.env.PORT;
+// let PORT=process.env.PORT;
 
-app.listen(PORT,()=>console.log(`server is listening at ${PORT}`))
+// app.listen(PORT,()=>console.log(`server is listening at ${PORT}`))

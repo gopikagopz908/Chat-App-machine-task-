@@ -1,10 +1,11 @@
 import asyncHandler from "../middleWare/asyncHandler.js";
 import User from "../model/authModel.js";
+export const getUser = asyncHandler(async (req, res) => {
+  const { userId: senderId } = req.user;
 
-export const getUser=asyncHandler(async(req,res)=>{
-    const user=await User.find()
-    return res.status(200).json({
-        message:"get all users successfully",
-        user
-    })
-})
+  const users = await User.find({ _id: { $ne: senderId } });
+  return res.status(200).json({
+    message: "Fetched all users except the current user successfully",
+    users,
+  });
+});

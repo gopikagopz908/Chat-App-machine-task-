@@ -5,7 +5,6 @@ import { loginService, registerService } from "../service/authService.js";
 
 export const Registration=asyncHandler(async(req,res)=>{
     const data=req.body;
-    console.log(req.body,'jjjj')
 
     const  registerUser=await registerService(data)
      const token=generateToken(registerUser._id)

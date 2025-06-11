@@ -3,6 +3,9 @@ import Message from "../model/messageModal.js";
 import { getReceiverSocketId } from "../socket/socket.js";
 
 export const sendMessageService = async (senderId, receiverId, message) => {
+  
+  console.log(senderId,'sedddddd')
+  console.log(receiverId,'reccccc')
   let conversation = await Conversation.findOne({
     participants: { $all: [senderId, receiverId] },
   });

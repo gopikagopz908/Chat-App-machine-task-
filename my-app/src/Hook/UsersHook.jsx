@@ -9,9 +9,7 @@ export function useAllUsers(){
         setLoading(true)
         try {
             const res=await axiosInstance.get('/user/getUsers')
-
-            console.log(res,'kk')
-            setData(res.data.user)
+            setData(res.data.users)
 
         } catch (error) {
             console.log(error)

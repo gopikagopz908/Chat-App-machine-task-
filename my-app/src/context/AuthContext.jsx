@@ -8,13 +8,14 @@ export const useAuthContext=()=>{
 }
 
 
-export const AuthContextProvider=({Children})=>{
+export const AuthContextProvider=({children})=>{
    const storedUser = localStorage.getItem('user');
- const [authUser, setAuthUser] = useState(storedUser ? JSON.parse(storedUser) : null);  
+ const [authUser, setAuthUser] = useState(storedUser ? JSON.parse(storedUser) : null); 
+//  const [authUser, setAuthUser] = useState(null);   
 
 return(
     <AuthContext.Provider value={{authUser,setAuthUser}}>
-        {Children}
+        {children}
     </AuthContext.Provider>
 )
 }
