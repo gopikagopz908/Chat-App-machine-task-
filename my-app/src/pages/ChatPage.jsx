@@ -29,9 +29,8 @@ setData("")
  <div className='flex w-full'>
 
     <div className="min-h-screen w-full bg-white flex flex-col">
-        <TopNavbar/>
-        <NavBar/>
-      {!selectedConversation ? (
+        
+  {!selectedConversation ? (
         // 🔹 If no user is selected, show this placeholder
         <div className="flex items-center justify-center h-screen text-gray-500 text-lg">
           Select a user to start chatting

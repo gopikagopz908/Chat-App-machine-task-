@@ -10,8 +10,8 @@ const{authUser}=useAuthContext()
 console.log(authUser,"authhhh")
   const{data}=useAllUsers()
   return (
-    <div className="min-h-screen  bg-white px-4 pt-4 pb-10">
-      <TopNavbar/>
+    <div className="min-h-screen  bg-white  pt-4 pb-10">
+      
         <NavBar/>
       <div className="w-full mx-auto">
         <div className="flex items-center gap-2 mb-4">

@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs'
 import User from "../model/authModel.js"
 
 export const registerService=async(data)=>{
-   const{firstName,lastName,email,password}=data
+   const{firstName,lastName,email,password,description}=data
   
    const userExists=await  User.findOne({email})
 
@@ -17,6 +17,7 @@ export const registerService=async(data)=>{
      firstName,
      lastName,
      email,
+     description,
      password:hashedPassword
    })
 

@@ -5,11 +5,9 @@ import { useAuthContext } from '../context/AuthContext';
 const MessageCard = ({msg}) => {
  const{selectedConversation}=useConversation()
  const {authUser}=useAuthContext()
- console.log(authUser,'authhh')
   const isSelected =msg?.senderId===selectedConversation?._id;
-  console.log(msg,"msgggggg")
   return (
-<div className={`w-full flex flex-col ${isSelected?'items-end':'items-start'} `}>
+<div className={`w-full flex flex-col ${isSelected?'items-start':'items-end'} `}>
   <div className={` text-black px-4 py-2 rounded-lg shadow-sm max-w-xs  ${isSelected?'bg-primary ':'bg-[#F2F2F2]'}`}>
     <p className="text-sm font-medium">{msg?.message}</p>
   </div>
