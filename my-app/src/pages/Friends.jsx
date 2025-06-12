@@ -1,13 +1,11 @@
 import React from 'react';
 import UserCard from '../components/UserCard';
 import NavBar from '../components/NavBar';
-import { useAllUsers, useGetFollowers } from '../Hook/UsersHook';
-import { useAuthContext } from '../context/AuthContext';
+import {  useGetFollowers } from '../Hook/UsersHook';
 import TopNavbar from '../components/MainNavbar';
 import { useFollowContext } from '../context/FollowContext';
 
 const ConnectPage = () => {
-const{authUser}=useAuthContext()
 useGetFollowers()
 const{following} = useFollowContext();
 console.log(following,"following")

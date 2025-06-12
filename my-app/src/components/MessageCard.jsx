@@ -1,10 +1,8 @@
 import React from 'react';
 import { useConversation } from '../context/ConversationContext';
-import { useAuthContext } from '../context/AuthContext';
 
 const MessageCard = ({msg}) => {
  const{selectedConversation}=useConversation()
- const {authUser}=useAuthContext()
   const isSelected =msg?.senderId===selectedConversation?._id;
   return (
 <div className={`w-full flex flex-col ${isSelected?'items-start':'items-end'} `}>
