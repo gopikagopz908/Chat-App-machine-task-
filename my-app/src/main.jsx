@@ -6,13 +6,16 @@ import {  AuthContextProvider } from './context/AuthContext.jsx'
 import { ConversationProvider } from './context/ConversationContext.jsx'
 
 import{SocketContextProvider}from './context/socketContext.jsx'
+import { FollowProvider } from './context/FollowContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthContextProvider>
       <ConversationProvider>
        <SocketContextProvider>
-<App />
+        <FollowProvider>  
+         <App />
+         </FollowProvider>
        </SocketContextProvider>
 
        

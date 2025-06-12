@@ -1,14 +1,20 @@
 import React from 'react';
-import Button from './Button'; // Reuse the button with `variant="outline"`
+import Button from './Button'; 
 import { useNavigate } from 'react-router-dom';
 import { useConversation } from '../context/ConversationContext';
+import { useFollowUser } from '../Hook/UsersHook';
 
-function UserCard({ user }) {
+function UserCard({ user,isConnect=true }) {
   const navigate=useNavigate()
   const{setSelectedConversation}=useConversation()
+  const {followUsers} =useFollowUser()
   const handleConversation=(user)=>{
     setSelectedConversation(user)
   navigate(`/chat`)
+  }
+
+  const handleFollowUsers=(id)=>{
+    followUsers({userIdToFollow:id})
   }
   
   return (
@@ -27,7 +33,14 @@ function UserCard({ user }) {
           <p className="text-xs text-gray-400 mt-1">{user.time}</p>
         </div>
       </div>
-      <Button label="Connect" variant="outline" onClick={() => alert(`Connecting to ${user.name}`)} />
+      {isConnect &&(
+      <Button 
+      label="Connect" 
+      variant="outline" 
+      onClick={()=>handleFollowUsers(user?._id)} 
+       />
+      )}
+
     </div>
   );
 }

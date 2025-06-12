@@ -1,16 +1,23 @@
 import React from 'react'
 import { FaEnvelope, FaBell, FaUserCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 function NavBar() {
   return (
-    <nav className='bg-white  shadow-md  px-6 py-3 flex items-center justify-between'>
+    <nav className='bg-white  shadow-md  px-4 py-2 flex items-center justify-between'>
 
     
     <div className='flex w-full gap-28 text-xl font-medium text-gray-700'>
-        <h2>Home</h2>
-        <h2>Friends</h2>
-        <h2>Groups</h2>
+<a href="/home">
+  <h2 class="cursor-pointer font-semibold text-gray-700 ">Home</h2>
+</a>
+
+<Link to="/friends">
+  <h2 className="text-lg font-semibold text-gray-700  cursor-pointer">
+    Friends
+  </h2>
+</Link>        <h2>Groups</h2>
         <h2>Groups</h2>
         <h2>Products</h2>
      

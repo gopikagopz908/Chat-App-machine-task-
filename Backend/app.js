@@ -10,10 +10,10 @@ import dbConnect from './src/dbConfig/dbConnect.js'
 
 dotenv.config();
 console.log(process.env.PORT,"jjj")
-let PORT=process.env.PORT||4004;
+let PORT=process.env.PORT;
 
 app.use(express.json()) 
-app.use(cookieParser())
+app.use(cookieParser())   
 
 app.use(cors({
     origin:'http://localhost:5173',

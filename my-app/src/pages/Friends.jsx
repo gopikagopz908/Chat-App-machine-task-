@@ -1,14 +1,16 @@
 import React from 'react';
 import UserCard from '../components/UserCard';
 import NavBar from '../components/NavBar';
-import { useAllUsers } from '../Hook/UsersHook';
+import { useAllUsers, useGetFollowers } from '../Hook/UsersHook';
 import { useAuthContext } from '../context/AuthContext';
 import TopNavbar from '../components/MainNavbar';
+import { useFollowContext } from '../context/FollowContext';
 
 const ConnectPage = () => {
 const{authUser}=useAuthContext()
-console.log(authUser,"authhhh")
-  const{data}=useAllUsers()
+useGetFollowers()
+const{following} = useFollowContext();
+console.log(following,"following")
   return (
     <div className="min-h-screen  bg-white px-4 pt-4 pb-10">
       <TopNavbar/>
@@ -21,8 +23,8 @@ console.log(authUser,"authhhh")
           <h1 className="text-lg font-semibold mt-4">Connect with like-minded parents</h1>
         </div>
         <div className="flex flex-col gap-4">
-          {data?.map((user, index) => (
-            <UserCard key={index} user={user}  />
+          {following?.map((user, index) => (
+            <UserCard key={index} user={user} isConnect={false}  />
           ))}
         </div>
       </div>

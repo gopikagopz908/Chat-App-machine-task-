@@ -22,6 +22,12 @@ const{loading,Login}=useLogin()
   return (
     <div className="bg-primary w-full h-screen flex items-center justify-center">
       <div className="p-10 ">
+        <img
+          src="/logo.png" 
+          alt="Logo"
+          className="w-34 mx-auto mb-4"
+        />
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Log in</h2>
         <form onSubmit={handleSubmit}>
           <div>
             <InputField

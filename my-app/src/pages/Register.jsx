@@ -26,11 +26,11 @@ const RegisterPage = () => {
     <div className="min-h-screen bg-primary  flex items-center justify-center">
       <div className=" p-10   w-full max-w-md ">
         <img
-          src="/logo.png" // Replace with your logo path
+          src="/logo.png" 
           alt="Logo"
-          className="w-24 mx-auto mb-4"
+          className="w-34 mx-auto mb-4"
         />
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Sign Up</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Sign Up</h2>
 
         <form onSubmit={handleSubmit}>
           <div className="flex gap-2 items-center">
