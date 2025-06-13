@@ -19,7 +19,10 @@ app.use(cors({
     origin:'https://chat-app-machine-task-agmf.vercel.app',
     credentials:true,
 }))
- 
+//  app.use(cors({
+//     origin:'http://localhost:5173',
+//     credentials:true,
+// }))
 
 
 app.use('/api/auth',authRoute)
