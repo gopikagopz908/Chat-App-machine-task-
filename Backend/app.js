@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(cookieParser())   
 
 app.use(cors({
-    origin:['https://chat-app-machine-task-agmf.vercel.app,http://localhost:5174'],
+    origin:'https://chat-app-machine-task-agmf.vercel.app',
     credentials:true,
 }))
  
